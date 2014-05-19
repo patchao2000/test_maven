@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.commons.lang3.StringEscapeUtils;
 
+@SuppressWarnings({"rawtypes"})
 public class StringUtils {
     protected StringUtils() {
     }

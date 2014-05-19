@@ -15,11 +15,11 @@
 	<bean id="applicationProperties" class="com.videostar.core.spring.ApplicationPropertiesFactoryBean" />
 
 	<!-- 定义受环境影响易变的变量 -->
-<!-- 	<bean
+	<bean
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="properties" ref="applicationProperties" />
 	</bean>
- -->
+
 	<!-- 国际化 -->
 <!-- 	<bean id="messageSource"
 		class="org.springframework.context.support.ResourceBundleMessageSource">

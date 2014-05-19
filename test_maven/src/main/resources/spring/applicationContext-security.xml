@@ -5,7 +5,7 @@
              xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
              http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
 
-    <http auto-config='true'>
+<!--     <http auto-config='true'>
         <intercept-url pattern="/admin.jsp" access="ROLE_ADMIN" />
         <intercept-url pattern="/**" access="ROLE_USER" />
     </http>
@@ -18,8 +18,8 @@
 			</user-service>
         </authentication-provider>
     </authentication-manager>
-	
-<!--     <http security="none" pattern="/s/**"/>
+ -->	
+    <http security="none" pattern="/s/**"/>
 	<http security="none" pattern="/favicon.ico"/>
 	<http security="none" pattern="/**/*.js"/>
 	<http security="none" pattern="/**/*.css"/>
@@ -43,5 +43,5 @@
 	<global-method-security proxy-target-class="true"
 	                        access-decision-manager-ref="accessDecisionManager"
 							secured-annotations="enabled"/>
- -->
+
  </beans:beans>

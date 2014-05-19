@@ -1,13 +1,13 @@
 package com.videostar.core.util;
 
 import java.lang.reflect.Method;
-
 import java.util.Map;
 import java.util.Properties;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+@SuppressWarnings({"rawtypes"})
 public class PropertiesUtils {
     private static Logger logger = LoggerFactory
             .getLogger(PropertiesUtils.class);

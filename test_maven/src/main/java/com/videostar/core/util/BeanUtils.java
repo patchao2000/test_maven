@@ -3,14 +3,12 @@ package com.videostar.core.util;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import org.springframework.util.Assert;
 
 /**
@@ -18,6 +16,7 @@ import org.springframework.util.Assert;
  * 
  * @author Lingo
  */
+@SuppressWarnings({"rawtypes", "unchecked"})
 public class BeanUtils /* extends org.apache.commons.beanutils.BeanUtils */{
     /** logger. */
     private static Logger logger = LoggerFactory.getLogger(BeanUtils.class);
@@ -237,7 +236,7 @@ public class BeanUtils /* extends org.apache.commons.beanutils.BeanUtils */{
         return invokeMethod(object, methodName, false, params);
     }
 
-    public static Object invokeMethod(Object object, String methodName,
+	public static Object invokeMethod(Object object, String methodName,
             boolean targetAccessible, Object... params)
             throws NoSuchMethodException, IllegalAccessException,
             InvocationTargetException {

@@ -9,8 +9,13 @@
 	<url>http://maven.apache.org</url>
 	
 	<properties>
+	    <commons-beanutils.version>1.9.1</commons-beanutils.version>
+	    <commons-codec.version>1.9</commons-codec.version>
 		<spring.version>3.2.8.RELEASE</spring.version>
 		<spring-security.version>3.2.3.RELEASE</spring-security.version>
+		<jms.version>1.1.1</jms.version>
+	    <jackson-jaxrs-json-provider.version>2.3.2</jackson-jaxrs-json-provider.version>
+	    <jackson-datatype-hibernate4.version>2.3.2</jackson-datatype-hibernate4.version>
 	</properties>
 
 	<dependencies>
@@ -31,6 +36,24 @@
 			<artifactId>commons-dbcp</artifactId>
 			<version>1.4</version>
 		</dependency>
+
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>${commons-beanutils.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>${commons-codec.version}</version>
+		</dependency>
+			
 		<dependency>
 			<groupId>org.lazyluke</groupId>
 			<artifactId>log4jdbc-remix</artifactId>
@@ -46,7 +69,22 @@
 			<artifactId>flyway-core</artifactId>
 			<version>2.3.1</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-jms_1.1_spec</artifactId>
+			<version>${jms.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.jaxrs</groupId>
+			<artifactId>jackson-jaxrs-json-provider</artifactId>
+			<version>${jackson-jaxrs-json-provider.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-hibernate4</artifactId>
+			<version>${jackson-datatype-hibernate4.version}</version>
+		</dependency>
+	
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
